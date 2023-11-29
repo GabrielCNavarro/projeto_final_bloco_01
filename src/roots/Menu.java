@@ -2,6 +2,8 @@ package roots;
 
 import java.util.Scanner;
 
+import roots.model.Organico;
+import roots.model.Vegano;
 import roots.util.Cores;
 
 
