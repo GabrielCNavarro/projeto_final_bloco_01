@@ -56,8 +56,6 @@ public class Menu {
 			System.out.println("************************************************************************");
 			System.out.println("* Entre com a opção desejada:                                          *");
 			System.out.println("************************************************************************");
-			opcao = leia.nextInt();
-			System.out.println("*                                                                       *"+ Cores.TEXT_RESET);
 			
 			try {
 				opcao = leia.nextInt();
@@ -76,23 +74,23 @@ public class Menu {
 		
 			switch (opcao) {
 					case 1:
-						System.out.println( Cores.TEXT_WHITE_BOLD + "Digite o tipo do Sabonete:\\n1 - Oragânico\\n2 - Vegano\n\n");
+						System.out.println( Cores.TEXT_WHITE_BOLD + "Digite o tipo do Sabonete:\n1 - Orgânico\n2 - Vegano\n\n");
 						System.out.print("tipo: ");
 						tipo = leia.nextInt();
 
 						switch (tipo) {
 							case 1 -> {
 								System.out.print("Digite o nome do Sabonete: ");
-								nome = leia.nextLine();
+								nome = leia.next();
 								System.out.print("Digite o preço do respectivo Sabonete: ");
 								preco = leia.nextFloat();
-								System.out.print("Digite o(s) ingrediente(s) Oragânico(s) do Sabonete: ");
+								System.out.print("Digite o(s) ingrediente(s) Orgânico(s) do Sabonete: ");
 								ingredOrganicos = leia.nextLine();
 								sabonetes.criarSabonete(new Organico(sabonetes.gerarId(), nome, tipo, preco, ingredOrganicos));
 							}
 							case 2 -> {
 								System.out.print("Digite o nome do Sabonete: ");
-								nome = leia.nextLine();
+								nome = leia.next();
 								System.out.print("Digite o preço do respectivo Sabonete: ");
 								preco = leia.nextFloat();
 								System.out.print("Digite o(s) ingrediente(s) Vegano(s) do Sabonete: ");
